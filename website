@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Argent Exchange, LLC — Interstellar Trade & Finance</title>
+  <meta name="description" content="Argent Exchange, LLC — a neutral, professional trade & finance operator. Company profile, credentials, and contact for banks, lenders, and partners." />
+  <meta name="theme-color" content="#0d1117" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Argent Exchange, LLC" />
+  <meta property="og:description" content="Professional profile and credentials for banks, lenders, and partners." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:url" content="https://www.argentexchange.com" />
+  <!-- Favicon placeholders (replace as desired) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" href="/favicon.ico" />
+  <style>
+    /* ---- Design Tokens ---- */
+    :root{
+      --bg: #0b0e13;             /* charcoal */
+      --card: #121722;            /* deep slate */
+      --ink: #e5e7eb;             /* light text */
+      --muted: #a6adbb;           /* muted text */
+      --brand:#bfc7d9;            /* silver */
+      --brand-strong:#cfd6ea;     /* brighter silver */
+      --accent:#7aa2ff;           /* subtle blue accent */
+      --ok:#59d185;
+      --warn:#ffb84d;
+      --danger:#ff6b6b;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--ink); background: radial-gradient(1200px 800px at 85% -10%, rgba(122,162,255,.08), transparent 60%),
+                          radial-gradient(1000px 700px at -20% 10%, rgba(191,199,217,.15), transparent 55%),
+                          var(--bg);
+      line-height:1.6; letter-spacing:.2px;
+    }
+    a{color:var(--brand-strong); text-decoration:none}
+    a:hover{opacity:.9; text-decoration:underline}
+
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+    .nav{position:sticky; top:0; backdrop-filter: blur(8px); background: rgba(11,14,19,.6); border-bottom:1px solid rgba(207,214,234,.08); z-index:20}
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px}
+    .brand svg{width:36px; height:36px}
+    .brand h1{font-size:18px; margin:0; font-weight:700; letter-spacing:.4px}
+    .nav a.cta{padding:9px 14px; border-radius:12px; background:linear-gradient(180deg, rgba(191,199,217,.2), rgba(191,199,217,.09)); border:1px solid rgba(207,214,234,.25); box-shadow: var(--shadow)}
+
+    .hero{padding:72px 0 36px}
+    .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:40px}
+    @media (max-width: 900px){.hero-grid{grid-template-columns:1fr; gap:24px}}
+    .card{background: linear-gradient(180deg, rgba(16,22,33,.9), rgba(16,22,33,.72)); border:1px solid rgba(207,214,234,.10); border-radius:var(--radius); box-shadow:var(--shadow)}
+    .p24{padding:24px}
+    .p32{padding:32px}
+    .kpi{display:flex; gap:18px; flex-wrap:wrap}
+    .kpi div{padding:16px 18px; border-radius:14px; background:rgba(191,199,217,.08); border:1px solid rgba(207,214,234,.14)}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:rgba(191,199,217,.08); border:1px solid rgba(207,214,234,.14); color:var(--brand-strong); font-size:12px}
+
+    h2{font-size:28px; margin:0 0 10px}
+    h3{font-size:20px; margin:0 0 8px}
+    .muted{color:var(--muted)}
+    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+    @media (max-width: 900px){.grid-2{grid-template-columns:1fr}}
+
+    .list{margin:0; padding-left:18px}
+    .list li{margin:6px 0}
+
+    .section{padding:26px 0}
+    .badge{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid rgba(207,214,234,.14); background:rgba(191,199,217,.05); display:inline-block}
+
+    .cred-table{width:100%; border-collapse:separate; border-spacing:0 10px}
+    .cred-table th{font-weight:600; text-align:left; color:var(--muted); font-size:12px}
+    .cred-table td{padding:12px 14px; background: rgba(191,199,217,.07); border:1px solid rgba(207,214,234,.12)}
+    .cred-table tr td:first-child{border-radius:12px 0 0 12px}
+    .cred-table tr td:last-child{border-radius:0 12px 12px 0}
+
+    .footer{padding:28px 0 50px; color:var(--muted); font-size:14px}
+
+    /* Print-friendly tweaks */
+    @media print{ .nav, .cta, .pill { display:none !important } body{ background:#fff; color:#000 } .card{ box-shadow:none; border-color:#ddd } a{ color:#000; text-decoration:underline } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Argent Exchange, LLC",
+    "url": "https://www.argentexchange.com",
+    "logo": "https://www.argentexchange.com/favicon.svg",
+    "description": "Interstellar trade and finance operator providing neutral, professional services.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lawton",
+      "addressRegion": "OK",
+      "addressCountry": "US"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "business",
+      "email": "hello@argentexchange.com",
+      "telephone": "+1 (555) 555-5555"
+    }],
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand" aria-label="Argent Exchange logo and name">
+        <!-- Simple geometric silver coin/orb mark -->
+        <svg viewBox="0 0 64 64" role="img" aria-label="Argent Exchange logo" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="g" cx="35%" cy="25%" r="70%">
+              <stop offset="0%" stop-color="#eef2ff"/>
+              <stop offset="55%" stop-color="#cfd6ea"/>
+              <stop offset="100%" stop-color="#9aa4bf"/>
+            </radialGradient>
+          </defs>
+          <circle cx="32" cy="32" r="28" fill="url(#g)"/>
+          <path d="M16 34c6 8 18 8 26 0" fill="none" stroke="#0b0e13" stroke-width="2.5" opacity=".18"/>
+          <path d="M18 28c5 6 15 6 22 0" fill="none" stroke="#0b0e13" stroke-width="2.5" opacity=".1"/>
+        </svg>
+        <h1>Argent Exchange, LLC</h1>
+      </div>
+      <a class="cta" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div class="card p32">
+        <span class="pill" title="External-facing company profile">Neutral • Professional • Verified</span>
+        <h2 style="margin-top:12px">Trade & Finance Operations — Built for Credibility</h2>
+        <p class="muted">This page provides a concise, bank‑friendly profile: who we are, what we do, and how to reach us. No fluff — just the facts lenders and partners care about.</p>
+        <div class="kpi" aria-label="company highlights">
+          <div>
+            <div class="muted" style="font-size:12px">Entity</div>
+            <strong>LLC (US)</strong>
+          </div>
+          <div>
+            <div class="muted" style="font-size:12px">Status</div>
+            <strong>Active & In Good Standing</strong>
+          </div>
+          <div>
+            <div class="muted" style="font-size:12px">Focus</div>
+            <strong>Trade • Finance • Logistics</strong>
+          </div>
+        </div>
+      </div>
+      <aside class="card p24" aria-label="Quick contacts">
+        <h3>Point of Contact</h3>
+        <p class="muted" style="margin-top:-6px">Primary line into the business.</p>
+        <ul class="list" style="list-style:none; padding:0; margin:10px 0 0">
+          <li><strong>Email:</strong> <a href="mailto:hello@argentexchange.com">hello@argentexchange.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+15555555555">+1 (555) 555‑5555</a></li>
+          <li><strong>Address:</strong> Lawton, OK • United States</li>
+        </ul>
+        <div style="height:12px"></div>
+        <a class="cta" href="#credentials">View Credentials</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- About / Services -->
+  <section class="wrap section">
+    <div class="grid-2">
+      <div class="card p24">
+        <h3>About Argent Exchange</h3>
+        <p>Argent Exchange, LLC is a neutral trade and finance operator. We support compliant commerce, secure logistics, and capital workflows with a bias for clarity, controls, and audit‑readiness.</p>
+        <ul class="list">
+          <li>Vendor & partner onboarding with clear documentation.</li>
+          <li>Operational discipline: controls, record‑keeping, and verification.</li>
+          <li>Pragmatic, lender‑friendly financial narratives.</li>
+        </ul>
+      </div>
+      <div class="card p24">
+        <h3>Core Services</h3>
+        <ul class="list">
+          <li>Trade facilitation and supplier coordination</li>
+          <li>Basic finance ops: invoicing, collections, and reconciliation</li>
+          <li>Logistics oversight for high‑value shipments</li>
+          <li>Risk controls and documentation hygiene</li>
+        </ul>
+        <span class="badge" title="We keep it tight and compliant">Lean • Documented • Bank‑ready</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials Table -->
+  <section id="credentials" class="wrap section">
+    <div class="card p24">
+      <h3>Company Credentials</h3>
+      <table class="cred-table" aria-label="Company credentials and identifiers">
+        <thead>
+          <tr>
+            <th scope="col">Field</th>
+            <th scope="col">Value</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Legal Name</td>
+            <td><strong>Argent Exchange, LLC</strong></td>
+            <td>Registered in the United States</td>
+          </tr>
+          <tr>
+            <td>EIN</td>
+            <td><strong>XX‑XXXXXXX</strong></td>
+            <td>Provide on request for underwriting</td>
+          </tr>
+          <tr>
+            <td>D‑U‑N‑S</td>
+            <td><strong>XXXXXXXXX</strong></td>
+            <td>If available; optional for some vendors</td>
+          </tr>
+          <tr>
+            <td>NAICS</td>
+            <td><strong>541611</strong> (Admin Mgmt & Consulting)</td>
+            <td>Adjust to your final classification</td>
+          </tr>
+          <tr>
+            <td>SIC</td>
+            <td><strong>7389</strong> (Business Services, NEC)</td>
+            <td>Adjust as needed</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>Lawton, Oklahoma, USA</td>
+            <td>City/State is sufficient for a public page</td>
+          </tr>
+          <tr>
+            <td>Banking</td>
+            <td>Available upon request</td>
+            <td>Issued securely to underwriters only</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Contact / Netlify Form -->
+  <section id="contact" class="wrap section">
+    <div class="grid-2">
+      <div class="card p24">
+        <h3>Contact</h3>
+        <p class="muted">Use the form for vendor onboarding, underwriting questions, or to request credentials. We respond within 1–2 business days.</p>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none">
+            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          </p>
+          <div class="grid-2">
+            <p><label>Full Name<br><input required name="name" placeholder="Jane Smith" /></label></p>
+            <p><label>Company<br><input name="company" placeholder="Acme Bank" /></label></p>
+          </div>
+          <div class="grid-2">
+            <p><label>Email<br><input required type="email" name="email" placeholder="jane@acme.com" /></label></p>
+            <p><label>Phone<br><input name="phone" placeholder="+1 (555) 123‑4567" /></label></p>
+          </div>
+          <p><label>Topic<br>
+            <select name="topic">
+              <option>Underwriting / Due Diligence</option>
+              <option>Vendor Onboarding</option>
+              <option>Partnership Inquiry</option>
+              <option>General</option>
+            </select>
+          </label></p>
+          <p><label>Message<br><textarea required name="message" rows="5" placeholder="How can we help?"></textarea></label></p>
+          <p>
+            <button type="submit" class="cta" style="border:none; cursor:pointer">Send Securely</button>
+          </p>
+        </form>
+      </div>
+      <aside class="card p24">
+        <h3>Assurances</h3>
+        <ul class="list">
+          <li>We provide documents on a <em>need‑to‑know</em> basis.</li>
+          <li>We maintain clean books and auditable records.</li>
+          <li>We align to bank‑grade compliance expectations.</li>
+        </ul>
+        <div style="height:10px"></div>
+        <span class="badge">Risk‑aware • Documentation‑first</span>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer wrap">
+    <div class="card p24" style="display:flex; align-items:center; justify-content:space-between; gap:16px">
+      <div>
+        © <span id="year"></span> Argent Exchange, LLC. All rights reserved.
+      </div>
+      <div>
+        <a href="#credentials">Credentials</a> • <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // nice little year updater
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // light input styling without Tailwind/Bootstrap
+    const style = document.createElement('style');
+    style.textContent = `
+      input, select, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(207,214,234,.2); background:#0f1420; color:var(--ink)}
+      input:focus, select:focus, textarea:focus{outline:none; border-color: var(--accent); box-shadow:0 0 0 3px rgba(122,162,255,.25)}
+      button.cta{padding:12px 16px; border-radius:12px; background:linear-gradient(180deg, rgba(191,199,217,.32), rgba(191,199,217,.14)); border:1px solid rgba(207,214,234,.38)}
+      table.cred-table td strong{color:var(--brand-strong)}
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
